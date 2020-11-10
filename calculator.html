@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Include Bootstrap from CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Include Javascript file -->
+    <script type="text/javascript" src="calculator.js"></script>
+
+    <!-- Web page name -->
+    <title>Calculator</title>
+</head>
+
+<body style="background-color:gray">
+<!-- Page Content -->
+    <br>
+    <div class="container-fluid">
+        <!-- Create calculator interface-->
+        <div class="card">
+            <!-- Display area to display numbers and symbols-->
+            <h1 id="display-expression">0</h1>
+            <hr>
+            <!-- All Clear Button -->
+            <div class="col"><button type="button" class="btn btn-danger btn-block" onclick="allClear()">All Clear!</button></div>
+            <br>
+
+            <div class="col">
+                <div class="row">
+                    <!-- First row of buttons -->
+                    <div class="col-sm"><button type="button" class="btn btn-secondary btn-block" id="square-button" onclick="squareNumber()"><em>x</em><sup>2</sup></button></div>
+                    <div class="col-sm"><button type="button" class="btn btn-secondary btn-block" id="square-root-button" onclick="squareRootNumber()">&#8730</button></div>
+                    <div class="col-sm"><button type="button" class="btn btn-secondary btn-block" onclick="deleteDisplay()">&#9003</button></div>
+                    <div class="col-sm"><button type="button" class="btn btn-dark btn-block" onclick="addNumberDisplay('1')">1</button></div>
+                    <div class="col-sm"><button type="button" class="btn btn-dark btn-block" onclick="addNumberDisplay('2')">2</button></div>
+                    <div class="col-sm"><button type="button" class="btn btn-dark btn-block" onclick="addNumberDisplay('3')">3</button></div>
+                    <div class="col-sm"><button type="button" class="btn btn-primary btn-block" id="addition-button" onclick="addOperatorDisplay('+')">+</button></div>
+                </div>
+            </div>
+            <br>
+            <div class="col">
+                <div class="row">
+                    <!-- Second row of buttons -->
+                    <div class="col-sm"><button type="button" class="btn btn-secondary btn-block" id="sin-button" onclick="solveSin('sin')">Sin</button></div>
+                    <div class="col-sm"><button type="button" class="btn btn-secondary btn-block" id="asin-button" onclick="solveSin('asin')">ASin</button></div>
+                    <div class="col-sm"><button type="button" class="btn btn-secondary btn-block" id="asinh-button" onclick="solveSin('asinh')">ASinH</button></div>
+                    <div class="col-sm"><button type="button" class="btn btn-dark btn-block" onclick="addNumberDisplay('4')">4</button></div>
+                    <div class="col-sm"><button type="button" class="btn btn-dark btn-block" onclick="addNumberDisplay('5')">5</button></div>
+                    <div class="col-sm"><button type="button" class="btn btn-dark btn-block" onclick="addNumberDisplay('6')">6</button></div>
+                    <div class="col-sm"><button type="button" class="btn btn-primary btn-block" id="subtraction-button" onclick="addOperatorDisplay('-')">-</button></div>
+                </div>
+            </div>
+            <br>
+            <div class="col">
+                <div class="row">
+                    <!-- Third row of buttons -->
+                    <div class="col-sm"><button type="button" class="btn btn-secondary btn-block" id="cos-button" onclick="solveCos('cos')">Cos</button></div>
+                    <div class="col-sm"><button type="button" class="btn btn-secondary btn-block" id="acos-button" onclick="solveCos('acos')">ACos</button></div>
+                    <div class="col-sm"><button type="button" class="btn btn-secondary btn-block" id="acosh-button" onclick="solveCos('acosh')">ACosH</button></div>
+                    <div class="col-sm"><button type="button" class="btn btn-dark btn-block" onclick="addNumberDisplay('7')">7</button></div>
+                    <div class="col-sm"><button type="button" class="btn btn-dark btn-block" onclick="addNumberDisplay('8')">8</button></div>
+                    <div class="col-sm"><button type="button" class="btn btn-dark btn-block" onclick="addNumberDisplay('9')">9</button></div>
+                    <div class="col-sm"><button type="button" class="btn btn-primary btn-block" id="multiplication-button" onclick="addOperatorDisplay('X')">X</button></div>
+                </div>
+            </div>
+            <br>
+            <div class="col">
+                <div class="row">
+                    <!-- Fourth row of buttons -->
+                    <div class="col-sm"><button type="button" class="btn btn-secondary btn-block" id="tan-button" onclick="solveTan('tan')">Tan</button></div>
+                    <div class="col-sm"><button type="button" class="btn btn-secondary btn-block" id="atan-button" onclick="solveTan('atan')">ATan</button></div>
+                    <div class="col-sm"><button type="button" class="btn btn-secondary btn-block" id="atanh-button" onclick="solveTan('atanh')">ATanH</button></div>
+                    <div class="col-sm"><button type="button" class="btn btn-dark btn-block" onclick="addDecimalPointDisplay()">.</button></div>
+                    <div class="col-sm"><button type="button" class="btn btn-dark btn-block" onclick="addNumberDisplay('0')">0</button></div>
+                    <div class="col-sm"><button type="button" class="btn btn-dark btn-block" onclick="equalButton()">=</button></div>
+                    <div class="col-sm"><button type="button" class="btn btn-primary btn-block" id="division-button" onclick="addOperatorDisplay('/')">/</button></div>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</body>
+</html>
